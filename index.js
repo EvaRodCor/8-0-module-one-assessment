@@ -28,6 +28,10 @@ const exampleMovies = require("./movies");
       "James and the Giant Peach",
     ];
  */
+function lowerCased(n){
+  let movie = movies.title.toLowerCase()
+}
+
 function getAllMovieTitles(movies) {
   let movieNames = [];
 
@@ -42,7 +46,6 @@ function getAllMovieTitles(movies) {
 }
 
 
-
 /**
  * getHighestMetascore()
  * -----------------------------
@@ -54,6 +57,7 @@ function getAllMovieTitles(movies) {
  *  getHighestMetascore(movies);
  *  //> 96
  */
+
 function getHighestMetascore(movies) {
 
 if (movies.length === 0) {
@@ -69,7 +73,7 @@ if (Number(topMovie.metascore) > highestScore) {
   return highestScore;
 }
 
-// console.log(getHighestMetascore(exampleMovies))
+
 
 
 /**
@@ -95,7 +99,7 @@ if (movies.length === 0) {
 return Number((totalAverage / movies.length).toFixed(2));
 }
 
-// console.log(getAverageIMDBRating(exampleMovies))
+
 
 /**
  * countByRating()
@@ -122,7 +126,7 @@ function countByRating(movies) {
   return ratingCount;
 }
 
-console.log(countByRating(exampleMovies))
+
 
 /**
  * findById()
@@ -148,7 +152,7 @@ function findById(movies, id) {
    }
    return null;
   }
-  // console.log(findById(exampleMovies))
+ 
 
 /**
  * filterByGenre()
@@ -171,19 +175,20 @@ function findById(movies, id) {
  *  //> []
  */
 
+
+// I'm sorry I just really don't know where to place toLowerCase() in order to make ir case insensitive.
 function filterByGenre(movies, genre) {
 
   let genreFilter = [];
-    
-  for (let i = 0; i < movies.length; i++) { 
-  if (movies[i].genre.includes(genre)) {
-    genreFilter.push(movies[i])
+  for (const i of movies) { 
+  if (i.genre.toLowerCase().includes(genre.toLowerCase())) {
+    genreFilter.push(i)
   }
-}
+ }
   return genreFilter;
   }
 
-// console.log(filterByGenre(exampleMovies, "Mystery")) 
+
 
 /**
  * getAllMoviesReleasedAtOrBeforeYear()
@@ -220,7 +225,7 @@ if(yearOut <= year) {
 }
  return dateReleased;
 }
-console.log(getAllMoviesReleasedAtOrBeforeYear(exampleMovies));
+
 
 /**
  * getBiggestBoxOfficeMovie()
@@ -233,6 +238,7 @@ console.log(getAllMoviesReleasedAtOrBeforeYear(exampleMovies));
  *  getBiggestBoxOfficeMovie(movies);
  *  //> "Incredibles 2"
  */
+
 function getBiggestBoxOfficeMovie(movies) {
   
   if (movies.length === 0) {
@@ -249,7 +255,7 @@ function getBiggestBoxOfficeMovie(movies) {
     return movieName;
   }
 
-  // console.log(getBiggestBoxOfficeMovie(exampleMovies))
+  
 // Do not change anything below this line.
 module.exports = {
   getAllMovieTitles,
