@@ -112,6 +112,7 @@ return Number((totalAverage / movies.length).toFixed(2));
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
+
 function countByRating(movies) {
 
   let ratingCount = {};
@@ -142,6 +143,7 @@ function countByRating(movies) {
       // Toy Story 4
     };
  */
+
 function findById(movies, id) {
   if (!movies.length) return null;
 
@@ -176,7 +178,7 @@ function findById(movies, id) {
  */
 
 
-// I'm sorry I just really don't know where to place toLowerCase() in order to make ir case insensitive.
+
 function filterByGenre(movies, genre) {
 
   let genreFilter = [];
@@ -225,7 +227,6 @@ if(yearOut <= year) {
 }
  return dateReleased;
 }
-
 
 /**
  * getBiggestBoxOfficeMovie()
