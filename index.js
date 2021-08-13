@@ -28,9 +28,6 @@ const exampleMovies = require("./movies");
       "James and the Giant Peach",
     ];
  */
-function lowerCased(n){
-  let movie = movies.title.toLowerCase()
-}
 
 function getAllMovieTitles(movies) {
   let movieNames = [];
@@ -72,8 +69,6 @@ if (Number(topMovie.metascore) > highestScore) {
   }
   return highestScore;
 }
-
-
 
 
 /**
@@ -215,19 +210,19 @@ function filterByGenre(movies, genre) {
     ];
  */
 
-function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
-  let dateReleased = [];
-
-for (const i of movies) {
- let movieSplitArray = i.released.split(" ");
- let yearOut = movieSplitArray[2];
-if(yearOut <= year) {
-  dateReleased.push(i)
-  }
-}
- return dateReleased;
-}
-
+    function getAllMoviesReleasedAtOrBeforeYear(movies, year) {
+      let dateReleased = [];
+    
+    for (const i of movies) {
+     let movieSplitArray = i.released.split(" ");
+     let yearOut = movieSplitArray[2];
+    if(yearOut <= year) {
+      dateReleased.push(i)
+      }
+    }
+     return dateReleased;
+    }
+    
 /**
  * getBiggestBoxOfficeMovie()
  * -----------------------------
@@ -242,7 +237,7 @@ if(yearOut <= year) {
 
 function getBiggestBoxOfficeMovie(movies) {
   
-  if (movies.length === 0) {
+if (movies.length === 0) {
     return null;
   }
   let movieName = "Black Panther"
